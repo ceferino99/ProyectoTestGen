@@ -14,8 +14,8 @@ public class Main {
 		Pregunta p2 = new Pregunta("¿Cuánto es 2+2?", op2, 3);
 		List<Pregunta> preguntas = List.of(p1,p2);
 		Examen e = new Examen(preguntas, 2);
-		Pregunta.OpcionesAleatorias oprandom = p2.generarOpcionesAleatorias();
-		System.out.println("Pregunta: " + p2.getEnunciado());
+		Pregunta.OpcionesAleatorias oprandom = p1.generarOpcionesAleatorias();
+		System.out.println("Pregunta: " + p1.getEnunciado());
 		for(int i = 0; i < oprandom.getOpciones().size(); i++) {
 			System.out.println((char)('A'+i) + ") " + oprandom.getOpciones().get(i));
 		}
