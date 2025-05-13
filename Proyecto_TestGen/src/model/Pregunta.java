@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Collections;
 
 public class Pregunta {
+	//Constantes
 	private static final int CANTIDADOPCIONES = 4;	//Constante para marcar cuantas opciones habra
+	//Atributos
 	private String enunciado;						//Enunciado de la pregunta
 	private List<String> opciones;					//Las 4 opciones posibles
 	private int indiceCorrecta;						//Indice de la opcion correcta
@@ -63,9 +65,19 @@ public class Pregunta {
 		public List<String> opciones;
 		public int indiceCorrecta;
 		
+		//Constructor
 		public OpcionesAleatorias(List<String> _opciones, int _indiceCorrecta) {
 			this.opciones = new ArrayList<String>(_opciones);
 			this.indiceCorrecta = _indiceCorrecta;
+		}
+		
+		//Metodos get
+		public List<String> getOpciones() {
+			return new ArrayList<String>(this.opciones);
+		}
+
+		public int getIndiceCorrecta() {
+			return this.indiceCorrecta;
 		}
 	}
 }
