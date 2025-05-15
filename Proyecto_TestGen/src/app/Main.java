@@ -2,11 +2,21 @@ package app;
 
 import java.util.List;
 
+import javax.swing.SwingUtilities;
+
 import model.Examen;
 import model.Pregunta;
+import view.MainMenuFrame;
 
 public class Main {
 	public static void main(String[] args) {
+		/*SwingUtilities.invokeLater(() -> {
+			new MainMenuFrame().setVisible(true);
+		});
+		
+	}
+	*/
+	
 		// TODO Auto-generated method stub
 		List<String> op1 = List.of("Barcelona","Madrid","Valencia","Murcia");
 		List<String> op2 = List.of("1","2","3","4");
@@ -21,5 +31,4 @@ public class Main {
 		}
 		System.out.println("La respuesta correcta es: " + (char)('A'+oprandom.getIndiceCorrecta()) + ") " + oprandom.getOpciones().get(oprandom.getIndiceCorrecta()));
 	}
-
 }
